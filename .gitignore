@@ -2,7 +2,8 @@ node_modules/
 bower_components/
 *.log
 
-
+dist/bundle.js
+dist/bundle.js.map
 
 # exception to the rule
 !dist/.gitkeep
@@ -14,3 +15,4 @@ package.json
 ##Misc##
 thesisREQ.txt
 thesis_ideas.md
+bundle
