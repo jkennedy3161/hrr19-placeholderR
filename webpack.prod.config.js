@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-  context: path.join(__dirname, 'dist'),
+  context: path.join(__dirname, 'client'),
   devtool: 'source-map',
   entry: [
     './main.js'
