@@ -1,17 +1,19 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path')
+const webpack = require('webpack')
 
-var config = {
-  context: path.join(__dirname, 'client'),
+module.exports = {
   devtool: 'source-map',
+
   entry: [
-    './main.js'
+    './src/index'
   ],
+
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    pathPath: '/dist/'
+    publicPath: '/public/'
   },
+
   plugins: [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
@@ -26,20 +28,19 @@ var config = {
       }
     })
   ],
+
   module: {
     loaders: [
       { test: /\.js?$/,
         loader: 'babel',
         exclude: /node_modules/ },
-      //{ test: /\.scss?$/,
-        //loader: 'style!css!sass',
-        //include: path.join(__dirname, 'src', 'styles') },
+      { test: /\.scss?$/,
+        loader: 'style!css!sass',
+        include: path.join(__dirname, 'src', 'styles') },
       { test: /\.png$/,
         loader: 'file' },
       { test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file'}
     ]
   }
-};
-
-module.exports = config;
+}
