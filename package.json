@@ -7,7 +7,7 @@
     "build": "webpack --config ./webpack.prod.config.js --progress --colors",
     "lint-staged": "lint-staged",
     "compile": "webpack",
-    "start": "node ./client/main.js",
+    "start": "post-install",
     "dev": "grunt && node server/server.js",
     "test": "./node_modules/.bin/mocha --reporter spec --compilers js:babel-core/register **/*test.js",
     "post-install": "npm run build"
