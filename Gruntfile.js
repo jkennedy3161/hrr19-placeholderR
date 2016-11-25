@@ -2,7 +2,7 @@ module.exports = function (grunt) {
   var webpackConfig = require("./webpack.config.js");
   grunt.initConfig({
     clean: {
-      js: ['./client/dist/**/*.js']
+      js: ['./client/dist/**/*.js', './client/dist/**/*.map']
     },
     webpack: {
       options: webpackConfig,
