@@ -2,15 +2,15 @@ var path = require('path');
 var webpack = require('webpack');
 
 var config = {
-  context: path.join(__dirname, 'client'),
+  context: path.join(__dirname, 'dist'),
   devtool: 'source-map',
   entry: [
     './main.js'
   ],
   output: {
-    path: path.join(__dirname, '/client/dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    pathPath: '/client/dist/'
+    pathPath: '/dist/'
   },
   plugins: [
     new webpack.optimize.DedupePlugin(),
