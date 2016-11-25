@@ -5,7 +5,8 @@
   "main": "webpack.dev.config.js",
   "scripts": {
   "build": "webpack --config ./webpack.prod.config.js --progress --colors",
-  "start": "node ./src/app.js"
+  "start": "node ./src/app.js",
+  "post-install": "npm run build"
   },
   "repository": {
     "type": "git",
