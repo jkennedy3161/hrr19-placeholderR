@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 var heroku = require('../config/config.js');
 // using connection uri for connecting to MySQL ClearDB
-var db = new Sequelize(heroku.HEROKU_MYSQL_URI);
+var db = new Sequelize(heroku.HEROKU_MYSQL_URI2);
 
 // defining models using js, instead of a schema file
 var Ticket = db.define('Ticket', {
